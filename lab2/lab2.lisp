@@ -7,7 +7,7 @@
 ((zerop n) (cdr lst))
 (t (cons (car lst) (NewDelete (1- n) (cdr lst))))))
 
-(defun Search (needle haystack)
+(defun Suchen (needle haystack)
 (loop
 for element in haystack
 and position from 0
