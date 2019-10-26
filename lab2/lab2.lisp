@@ -1,6 +1,6 @@
-(defun InsertAt (n w v)
-(if (= n 0) (cons v w)
-(cons (car w) (InsertAt (1- n) (cdr w) v))))
+(defun InsertAt (position lst value)
+(if (= position 0) (cons value lst)
+(cons (car lst) (InsertAt (1- position) (cdr lst) value))))
 
 (defun NewDelete (n lst)
 (cond ((null lst) nil)
