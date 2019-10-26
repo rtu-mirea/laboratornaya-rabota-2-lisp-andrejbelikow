@@ -21,7 +21,7 @@ collect position))
 while line do (format t "~a~%" line))
 (close in))))
 
-( (defun DeepDecompress (lst)
+(defun DeepDecompress (lst)
 (if (zerop (car lst)) nil
 (cons (second lst) (DeepDecompress (list (1- (car lst)) (second lst))))))
 
