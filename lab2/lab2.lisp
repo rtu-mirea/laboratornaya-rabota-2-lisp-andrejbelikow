@@ -1,11 +1,11 @@
-(defun Insert (n w v)
+(defun InsertAt (n w v)
 (if (= n 0) (cons v w)
-(cons (car w) (insert-at (1- n) (cdr w) v))))
+(cons (car w) (InsertAt (1- n) (cdr w) v))))
 
-(defun Delete (n lst)
+(defun NewDelete (n lst)
 (cond ((null lst) nil)
 ((zerop n) (cdr lst))
-(t (cons (car lst) (del-by-num (1- n) (cdr lst))))))
+(t (cons (car lst) (NewDelete (1- n) (cdr lst))))))
 
 (defun Search (needle haystack)
 (loop
